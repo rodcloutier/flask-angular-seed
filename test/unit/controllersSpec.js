@@ -5,24 +5,25 @@
 describe('MyCtrl1', function(){
   var myCtrl1;
 
-  beforeEach(function(){
-    myCtrl1 = new MyCtrl1();
-  });
+  beforeEach(module("myApp"))
 
+  beforeEach(inject(function($controller){
+      myCtrl1 = $controller("MyCtrl1", {});
+  }));
 
-  it('should ....', function() {
-    //spec body
-  });
+  it('should ....', inject(function($controller) {
+  }));
 });
 
 
 describe('MyCtrl2', function(){
   var myCtrl2;
 
+  beforeEach(module("myApp"))
 
-  beforeEach(function(){
-    myCtrl2 = new MyCtrl2();
-  });
+  beforeEach(inject(function($controller){
+      myCtrl2 = $controller("MyCtrl1", {});
+  }));
 
 
   it('should ....', function() {
